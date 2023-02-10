@@ -26,3 +26,26 @@ function viraAzul() {
 function limpaTexto() {
     document.getElementById('campoTexto').value = " ";
 }
+
+function mudou() {
+    console.log('Mudou');
+}
+
+// function teclaPressionada() {
+//     let input = document.getElementById('campoTexto').value;
+//     console.log(input);
+// }
+
+// function teclaPressionada2() {
+//     let input = document.getElementById('campoTexto').value;
+//     console.log(input);
+// }
+
+// function teclaPressionada3() {
+//     let input = document.getElementById('campoTexto').value;
+//     console.log(input);
+// }
+
+// function teclaPressionada3() {
+//     console.log('Tecla Pressionada');
+// }

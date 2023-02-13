@@ -60,12 +60,59 @@ Pessoa.nome;
 // ADICIONAR um elemento na Primeira posicao do Array
 //  pessoa.unshift("Inteligente");
 
-// JUNCAO de dois arrays
+// JUNCAO de arrays
 const lista1 = ["matematica", "fisica", "quimica"];
 const lista2 = ["Portugues", "geografia", "historia"];
 const juncao = lista1.concat(lista2);
 
-document.getElementById("teste").innerHTML = juncao;
+// document.getElementById("teste").innerHTML = juncao;
+
+const jogadores = ["Benzema", "Ramos", 'Messi', 'Neymar', "Ronaldo", "Mbappe", "Torres", "Samuel"];
+
+//Mostrar os Elementos do array que preciso usando intervalos
+const craques = jogadores.slice(2, 6);
+document.getElementById("teste").innerHTML = craques;
+
+//Mostrar os Elementos do array em ORDEM CRESCENTE (LETRAS)
+const ordem = jogadores.sort();
+document.getElementById("teste").innerHTML = ordem;
+
+//Mostrar os Elementos do array em ORDEM DECRESCENTE (LETRAS)
+jogadores.sort();
+jogadores.reverse();
+document.getElementById("teste").innerHTML = ordem;
+
+//Mostrar os Elementos do array em ORDEM CRESCENTE (NUMEROS)
+const numeros = [17, 8, 30, 1, 7, 3, 20, 25];
+numeros.sort(function (a, b) { return a - b });
+document.getElementById("teste").innerHTML = numeros;
+
+//Mostrar os Elementos do array em ORDEM DECRESCENTE (NUMEROS)
+numeros.sort(function (a, b) { return b - a });
+document.getElementById("teste").innerHTML = numeros;
+
+// mostrar o MAIOR NUMERO do array
+function maiorNumero(array) {
+    return Math.max.apply(null, array);
+}
+// document.getElementById("teste").innerHTML = maiorNumero(numeros);
+
+// mostrar o MENOR NUMERO do array
+function menorNumero(array) {
+    return Math.min.apply(null, array);
+}
+document.getElementById("teste").innerHTML = menorNumero(numeros);
+
+// mostrar os NUMERO MAIORES que 10 do array
+const Numeros = [17, 8, 30, 1, 7, 3, 20, 25];
+const maiores10 = Numeros.filter(filtragem);
+
+function filtragem(value, index, array) {
+    return value > 10;
+};
+document.getElementById("teste").innerHTML = maiores10;
+
+
 
 
 
